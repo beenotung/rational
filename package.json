@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "rational number library",
   "keywords": [],
-  "author": "Beeno Tung",
+  "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
   "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
