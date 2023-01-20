@@ -9,6 +9,10 @@ rational number library
 ## Installation
 
 ```bash
+## for cli
+npm install --global rational.js
+
+## for library usage
 npm install rational.js
 ```
 
@@ -21,6 +25,13 @@ npm install rational.js
 - multiply
 - divide
 - pow
+
+## Command Line Usage
+
+```bash
+> rational 3.14
+157/50
+```
 
 ## Typescript Signatures
 
