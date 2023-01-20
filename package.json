@@ -4,8 +4,11 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "rational":"dist/cli.js"
+    "rational": "dist/cli.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "format": "prettier --write \"{src,test}/**/*.ts\"",
     "prebuild": "rm -f src/index.ts && gen-index",
