@@ -1,2 +1,2 @@
-import './core-test'
-import './math-test'
+import './core-test';
+import './math-test';

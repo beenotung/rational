@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "format": "prettier --write \"src/**/*.ts\"",
+    "format": "prettier --write \"{src,test}/**/*.ts\"",
     "prebuild": "rm -f src/index.ts && gen-index",
     "build": "tsc",
     "postbuild": "rm src/index.ts",
