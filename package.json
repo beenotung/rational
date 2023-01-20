@@ -28,7 +28,7 @@
     "postbuild": "rm src/index.ts",
     "test": "ts-node test/index.ts",
     "preversion": "npm run test",
-    "prepublish": "npm build"
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@beenotung/gen-index": "^1.2.1",
