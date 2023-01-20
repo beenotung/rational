@@ -14,7 +14,7 @@ export function number(x: rational): number {
   return x[0] / x[1];
 }
 
-export function _rational(f: number, maxError: number): rational {
+function _rational(f: number, maxError: number): rational {
   if (f === 0) {
     return [0, 1];
   }
