@@ -6,6 +6,12 @@ rational number library
 [![Minified Package Size](https://img.shields.io/bundlephobia/min/rational.js)](https://bundlephobia.com/package/rational.js)
 [![Minified and Gzipped Package Size](https://img.shields.io/bundlephobia/minzip/rational.js)](https://bundlephobia.com/package/rational.js)
 
+## Installation
+
+```bash
+npm install rational.js
+```
+
 ## Functions
 
 - rational :: f -> a/b where f is floating number, a,b are integers
