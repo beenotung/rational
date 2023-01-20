@@ -2,9 +2,9 @@
 
 rational number library
 
-[![npm Package Version](https://img.shields.io/npm/v/rational)](https://www.npmjs.com/package/rational)
-[![Minified Package Size](https://img.shields.io/bundlephobia/min/rational)](https://bundlephobia.com/package/rational)
-[![Minified and Gzipped Package Size](https://img.shields.io/bundlephobia/minzip/rational)](https://bundlephobia.com/package/rational)
+[![npm Package Version](https://img.shields.io/npm/v/rational.js)](https://www.npmjs.com/package/rational.js)
+[![Minified Package Size](https://img.shields.io/bundlephobia/min/rational.js)](https://bundlephobia.com/package/rational.js)
+[![Minified and Gzipped Package Size](https://img.shields.io/bundlephobia/minzip/rational.js)](https://bundlephobia.com/package/rational.js)
 
 ## Functions
 
