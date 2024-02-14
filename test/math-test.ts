@@ -23,8 +23,8 @@ function test(f: Function, x: rational, y: rational) {
   let correct = z[0] / z[1] === op(x[0] / x[1], y[0] / y[1]);
   console.log(
     `${correct ? '[v]' : '[x]'} ${toString(x)} ${f.name} ${toString(
-      y
-    )} = ${toString(z)}`
+      y,
+    )} = ${toString(z)}`,
   );
 }
 
