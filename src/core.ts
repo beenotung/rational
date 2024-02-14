@@ -5,7 +5,6 @@ export let MAX_ERROR = 1e-12;
 
 export function rational(f: number, maxError = MAX_ERROR): rational {
   return normalize(_rational(f, maxError));
-  // return _rational(f, maxError);
 }
 
 export function number(x: rational): number {
