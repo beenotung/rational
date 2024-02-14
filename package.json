@@ -29,10 +29,8 @@
   ],
   "scripts": {
     "format": "prettier --write \"{src,test}/**/*.ts\"",
-    "prebuild": "rm -f src/index.ts && gen-index",
-    "build": "tsc",
-    "postbuild": "rm src/index.ts",
-    "test": "ts-node test/index.ts",
+    "build": "rm -f src/index.ts && gen-index && tsc && rm src/index.ts",
+    "test": "ts-mocha test/*.test.ts",
     "preversion": "npm run test",
     "prepublishOnly": "npm run build"
   },
