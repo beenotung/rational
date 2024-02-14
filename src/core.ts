@@ -1,6 +1,6 @@
 export type rational = [number, number];
 
-const { floor, round, ceil, abs, log, pow, random } = Math;
+const { floor, abs, pow } = Math;
 export let MAX_ERROR = 1e-12;
 
 export function rational(f: number, maxError = MAX_ERROR): rational {
