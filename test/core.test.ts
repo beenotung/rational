@@ -3,9 +3,11 @@ import { rational as _rational } from '../src/core';
 
 let testCases: [f: number, a: number, b: number][] = [];
 
-function rational(f: number) {
-  let [a, b] = _rational(f);
-  testCases.push([f, a, b]);
+function rational(f: number, maxError?: number) {
+  let [a, b] = _rational(f, maxError);
+  if (!testCases.some((test) => test[0] == f)) {
+    testCases.push([f, a, b]);
+  }
   return [a, b];
 }
 
@@ -25,8 +27,14 @@ describe('rational()', () => {
     });
   });
   function test(f: number) {
-    it(`should handle ${f}`, () => {
+    it(`should handle ${f} without maxError`, () => {
       let [a, b] = rational(f);
+      expect(a / b).to.equals(f);
+      expect(Number.isInteger(a), 'a should be an integer');
+      expect(Number.isInteger(b), 'b should be an integer');
+    });
+    it(`should handle ${f} with maxError`, () => {
+      let [a, b] = rational(f, 1e-17);
       expect(a / b).to.equals(f);
       expect(Number.isInteger(a), 'a should be an integer');
       expect(Number.isInteger(b), 'b should be an integer');
