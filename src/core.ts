@@ -45,37 +45,12 @@ function _rational(f: number, maxError: number): rational {
     a = +f.toString().split('.')[1];
   }
   b = floor(a / f);
-  /*
-  let o = {a, b};
-  let report_now = 1;
-  let report_last = 1;
-  */
   for (;;) {
     const x = a / b;
     const diff = f - x;
     if (abs(diff) < maxError) {
       return [a, b];
     }
-    /*
-    report_now++;
-    let show = false;
-    if (report_last / report_now < 0.8) {
-      show = true;
-      console.log();
-      console.log({o, a, b, x, f});
-      console.log({
-        maxError,
-        diff: abs(diff),
-        rate: abs(diff) / f * 100,
-        a, b,
-        x,
-        f,
-        itr: report_now,
-        time: new Date().toLocaleString(),
-      });
-      report_last = report_now;
-    }
-    */
     if (diff > 0) {
       a++;
       if (a === a + 1) {
