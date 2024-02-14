@@ -1,31 +1,29 @@
 import { add, divide, minus, multiply, pow } from '../src/math';
 import { toString } from '../src/format';
 import { rational } from '../src/core';
+import { expect } from 'chai';
 
 function test(f: Function, x: rational, y: rational) {
-  let z = f(x, y);
-  let op = (() => {
-    switch (f) {
-      case add:
-        return (a, b) => a + b;
-      case minus:
-        return (a, b) => a - b;
-      case multiply:
-        return (a, b) => a * b;
-      case divide:
-        return (a, b) => a / b;
-      case pow:
-        return (a, b) => Math.pow(a, b);
-      default:
-        throw new Error('unknown op: ' + f);
-    }
-  })();
-  let correct = z[0] / z[1] === op(x[0] / x[1], y[0] / y[1]);
-  console.log(
-    `${correct ? '[v]' : '[x]'} ${toString(x)} ${f.name} ${toString(
-      y,
-    )} = ${toString(z)}`,
-  );
+  it(`${toString(x)} ${f.name} ${toString(y)}`, () => {
+    let z = f(x, y);
+    let op = (() => {
+      switch (f) {
+        case add:
+          return (a, b) => a + b;
+        case minus:
+          return (a, b) => a - b;
+        case multiply:
+          return (a, b) => a * b;
+        case divide:
+          return (a, b) => a / b;
+        case pow:
+          return (a, b) => Math.pow(a, b);
+        default:
+          throw new Error('unknown op: ' + f);
+      }
+    })();
+    expect(z[0] / z[1]).to.equals(op(x[0] / x[1], y[0] / y[1]))
+  })
 }
 
 (
