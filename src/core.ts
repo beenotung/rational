@@ -1,8 +1,6 @@
 export type rational = [number, number];
 
-/* tslint:disable */
 const { floor, round, ceil, abs, log, pow, random } = Math;
-/* tslint:enable */
 export let MAX_ERROR = 1e-12;
 
 export function rational(f: number, maxError = MAX_ERROR): rational {
